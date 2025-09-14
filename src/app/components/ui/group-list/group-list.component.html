@@ -1,0 +1,22 @@
+<section
+  class="group-container"
+  *ngIf="(groupedBookmarks$ | async) as groups"
+>
+  <ng-container *ngIf="hasBookmarks(groups) else noMatches">
+    <ng-container *ngFor="let category of categories">
+      <div class="cat-label" *ngIf="groups[category]?.length">
+        <h2 *ngIf="(searchTerm$ | async) === ''">{{ category }}</h2>
+        <app-card
+          [bookmarks]="groups[category]"
+          (updateEvent)="onUpdateButtonClicked($event)"
+          (deleteEvent)="onDeleteButtonClicked($event)"
+        ></app-card>
+      </div>
+    </ng-container>
+  </ng-container>
+</section>
+<ng-template #noMatches>
+  <div class="no-results">
+    <h3>{{ noMatchText }}</h3>
+  </div>
+</ng-template>

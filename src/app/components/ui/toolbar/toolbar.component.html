@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div class="header">
+    <mat-icon
+      class="toolbar-icon"
+      aria-hidden="false"
+      aria-label="bookmark icon"
+      fontIcon="bookmark"
+    ></mat-icon>
+    <h1>{{ title }}</h1>
+  </div>
+  <app-searchbar class="searchbar"
+    [label]="searchLabel"
+    (inputChanged)="searchTermChanged($event)"
+    (addEvent)="onAddClicked()"
+  ></app-searchbar>
+</mat-toolbar>

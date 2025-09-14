@@ -1,0 +1,14 @@
+.dialog-content-container{
+  display: flex;
+  flex-flow: column;
+  padding-top: 0;
+}
+.dialog-content{
+  overflow: hidden;
+}
+.form-field{
+  padding-top: 1rem;
+}
+.action{
+  padding-right: 1.5rem;
+}

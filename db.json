@@ -1,0 +1,45 @@
+{
+  "bookmarks": [
+    {
+      "id": "2025-08-14T10:00:00Z",
+      "title": "Angular Documentation",
+      "description": "Official documentation for Angular framework",
+      "url": "https://angular.io",
+      "createdAt": "2025-08-14T10:00:00Z"
+    },
+    {
+      "id": "2025-09-10T10:20:00Z",
+      "title": "Material Design",
+      "url": "https://material.io",
+      "desc": "",
+      "createdAt": "2025-09-10T10:20:00Z"
+    },
+    {
+      "id": "2023-09-10T10:20:00Z",
+      "title": "GitHub",
+      "description": "Code hosting platform for version control and collaboration",
+      "url": "https://github.com",
+      "createdAt": "2023-09-10T10:20:00Z"
+    },
+    {
+      "id": "2025-09-14T07:15:15.678Z",
+      "title": "TypeScript Handbook",
+      "url": "https://www.typescriptlang.org/docs/",
+      "description": "Guide and reference for TypeScript programming language",
+      "createdAt": "2025-09-14T07:15:15.678Z"
+    },
+    {
+      "id": "2025-05-14T08:51:00.877Z",
+      "title": "Dummy ",
+      "url": "https://",
+      "description": "This is a dummy bookmark"
+    },
+    {
+      "id": "2025-09-14T08:55:00.038Z",
+      "title": "TypeScript Handbook",
+      "url": "https://www.typescriptlang.org/docs/",
+      "description": "Guide and reference for TypeScript programming language",
+      "createdAt": "2025-09-14T08:55:00.038Z"
+    }
+  ]
+}

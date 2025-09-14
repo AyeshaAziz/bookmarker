@@ -1,0 +1,31 @@
+.card-wrapper {
+  display: flex;
+  padding: 0.5rem 3rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card {
+  display: flex;
+}
+.item {
+  flex: 1 1 1;
+}
+.last {
+  flex-basis: 100%;
+  color: blue;
+}
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+.icon {
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.dialog-container{
+  padding: 1rem;
+}
+.header{
+  display: flex;
+
+
+   h2{
+    padding-left: 1.25rem;
+    padding-top: 0.625rem;
+    width: 80%;
+  }
+  .icon{
+    align-self: flex-end;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .header h2 {
+    width: 90%;
+  }
+}

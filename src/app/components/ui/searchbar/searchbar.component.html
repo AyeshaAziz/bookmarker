@@ -1,0 +1,33 @@
+<div class="search-wrapper">
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-icon class="search-icon">search</mat-icon>
+    <input
+      #value
+      matInput
+      type="search"
+      name="search-field"
+      autocomplete="off"
+      autocorrect="off"
+      spellcheck="false"
+      (input)="onInputChanged(value)"
+      placeholder="{{ label }}"
+    />
+    <mat-icon
+      *ngIf="value.value"
+      matSuffix
+      mat-icon-button
+      aria-label="clear"
+      (click)="onClearClicked(value)"
+      class="close-icon"
+      >close</mat-icon
+    >
+  </mat-form-field>
+  <button
+    mat-icon-button
+    aria-label="add"
+    class="white-icon"
+    (click)="onAddClicked()"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

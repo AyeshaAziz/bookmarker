@@ -1,0 +1,12 @@
+<div class="dialog-container">
+  <div class="header">
+    <h2 mat-dialog-title tabindex="-1">{{ dialogData.dialogTitle }}</h2>
+  </div>
+  <app-ng-form
+    [label]="dialogData.buttonLabel"
+    [formFields]="formFieldsConfig"
+    [formGroup]="bookmarkForm"
+    (submitForm)="closeDialog()"
+    (cancelEvent)="closeDialog()"
+  ></app-ng-form>
+</div>

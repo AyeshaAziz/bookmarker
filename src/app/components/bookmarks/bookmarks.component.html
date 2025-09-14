@@ -1,0 +1,14 @@
+<app-toolbar
+  title="{{ title }}"
+  searchLabel="{{ searchLabel }}"
+  (searchInputChanged)="onSearch($event)"
+  (addEvent)="showDialog(undefined)"
+></app-toolbar>
+<app-group-list
+  (updateEvent)="showDialog($event)"
+  (deleteEvent)="deleteItem($event)"
+  *ngIf="(isLoading$ | async) === false && !isDialogOpen"
+></app-group-list>
+<div *ngIf="(isLoading$ | async)" class="spinner">
+  <mat-spinner></mat-spinner>
+</div>

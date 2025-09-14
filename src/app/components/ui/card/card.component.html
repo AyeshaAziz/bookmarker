@@ -1,0 +1,31 @@
+<div class="card-wrapper">
+  <div *ngFor="let item of bookmarks">
+    <mat-card>
+      <mat-card-content>
+        <div class="content-wrapper">
+          <mat-icon color="primary">bookmark</mat-icon>
+          <div class="text-content">
+            <div class="item">{{ item.title }}</div>
+            <span *ngIf="item.description"> - </span>
+            <div class="item">{{ item.description }}</div>
+            <div class="item last">
+              <a [href]="item.url" target="_blank" rel="noopener noreferrer">
+                {{ item.url }}
+              </a>
+            </div>
+          </div>
+          <mat-icon color="primary" class="icon" (click)="onEditClicked(item)">
+            edit
+          </mat-icon>
+          <mat-icon
+            color="accent"
+            class="icon"
+            (click)="onDeleteClicked(item.id)"
+          >
+            delete
+          </mat-icon>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
