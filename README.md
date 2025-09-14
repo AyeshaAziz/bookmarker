@@ -33,8 +33,7 @@ npm install
 
 ### Mock Backend (JSON Server)
 ```
-npm install -g json-server
-json-server --watch db.json --port 3000
+npx json-server --watch db.json --port 3000
 ```
 
 Runs at: [http://localhost:3000/bookmarks](http://localhost:3000/bookmarks)
