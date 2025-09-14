@@ -1,4 +1,5 @@
 @use "@angular/material" as mat;
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 html,
 body {
   height: 100%;
@@ -12,11 +13,20 @@ body {
   color: var(--mat-sys-on-surface);
 }
 
-.search-wrapper{
-    .mdc-text-field--filled:not(.mdc-text-field--disabled){
-    background-color: #3f51b5 !important;
-  }
+.search-wrapper {
   .mat-mdc-form-field-subscript-wrapper {
-  display: none !important;
+    display: none !important;
+  }
+  .mdc-text-field {
+    display: contents !important;
+  }
 }
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

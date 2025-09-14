@@ -25,13 +25,14 @@
     "@ngrx/entity": "^19.2.1",
     "@ngrx/store": "^19.2.1",
     "angular-in-memory-web-api": "^0.19.0",
+    "g": "^2.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.0.6",
-    "@angular/cli": "^19.0.6",
+    "@angular/cli": "^19.2.16",
     "@angular/compiler-cli": "^19.0.0",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "20.3.0",

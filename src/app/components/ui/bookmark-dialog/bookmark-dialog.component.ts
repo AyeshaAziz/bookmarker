@@ -11,11 +11,13 @@ import { SharedConstants } from '../../../shared/shared-constants';
 import { NgFormComponent } from '../ng-form/ng-form.component';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-bookmark-dialog',
   standalone: true,
-  imports: [NgFormComponent],
+  imports: [NgFormComponent, MatIconModule, MatDialogModule],
   templateUrl: './bookmark-dialog.component.html',
   styleUrl: './bookmark-dialog.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -42,10 +44,11 @@ export class BookmarkDialogComponent implements OnInit {
   }
 
   closeDialog() {
+    this.bookmarkForm.reset();
     this.dialogRef.close(this.bookmarkForm.value);
   }
 
-  private registerIcon():void{
+  private registerIcon(): void {
     this.matIconReg.addSvgIcon(
       this.icon,
       this.domSanatiser.bypassSecurityTrustResourceUrl(this.iconUrl)
@@ -64,8 +67,8 @@ export class BookmarkDialogComponent implements OnInit {
   private setFormFieldConfig(): void {
     this.formFieldsConfig = [
       {
-        name:'id',
-        value: this.dialogData?.id || null
+        name: 'id',
+        value: this.dialogData?.id || null,
       },
       {
         name: 'title',

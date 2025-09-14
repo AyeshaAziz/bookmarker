@@ -42,7 +42,6 @@ export class NgFormComponent implements OnInit {
   @Input() label!: string;
   @Output() submitForm = new EventEmitter<void>();
   @Output() cancelEvent = new EventEmitter<void>();
-
   FormHelper = FormHelper;
 
   ngOnInit() {
@@ -55,6 +54,7 @@ export class NgFormComponent implements OnInit {
         new FormControl(SharedConstants.EMPTY_STRING, validators)
       );
     });
+    
   }
 
   onCancel(): void {

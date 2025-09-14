@@ -29,8 +29,8 @@ const EDIT_TITLE = 'Edit Bookmark';
 const ADD_TITLE = 'Create New Bookmark';
 const ADD_LABEL = 'Add';
 const UPDATE_LABEL = 'Update';
-const WIDTH = '60vw';
-const HEIGHT = '70vh';
+const WIDTH = '50vw';
+const HEIGHT = '80vh';
 
 @Component({
   selector: 'app-bookmarks',
@@ -50,9 +50,7 @@ const HEIGHT = '70vh';
         style({ opacity: 0 }),
         animate('250ms ease-in', style({ opacity: 1 })),
       ]),
-      transition(':leave', [
-        animate('250ms ease-out', style({ opacity: 0 })),
-      ]),
+      transition(':leave', [animate('250ms ease-out', style({ opacity: 0 }))]),
     ]),
   ],
 })
@@ -84,20 +82,25 @@ export class Bookmarks implements OnInit, OnDestroy {
 
   showDialog(bookmark?: Bookmark): void {
     this.isDialogOpen = true;
-    const dialogRef: MatDialogRef<BookmarkDialogComponent, Bookmark | undefined> =
-      this.dialog.open(BookmarkDialogComponent, {
-        width: WIDTH,
-        height: HEIGHT,
-        data: this.mapData(bookmark),
-      });
-
-    this.sub = dialogRef.afterClosed().subscribe((result) => {
-      if (result?.title) {
-        this.store.dispatch(dialogClosed({ bookmark: result }));
-      }
-      this.isDialogOpen = false;
-      this.cdr.detectChanges();
+    const dialogRef: MatDialogRef<
+      BookmarkDialogComponent,
+      Bookmark | undefined
+    > = this.dialog.open(BookmarkDialogComponent, {
+      width: WIDTH,
+      height: HEIGHT,
+      autoFocus: false,
+      data: this.mapData(bookmark),
     });
+
+    this.sub = dialogRef
+      .afterClosed()
+      .subscribe((result: Bookmark | undefined) => {
+        if (result?.title) {
+          this.store.dispatch(dialogClosed({ bookmark: result }));
+        }
+        this.isDialogOpen = false;
+        this.cdr.detectChanges();
+      });
   }
 
   deleteItem(id: string): void {

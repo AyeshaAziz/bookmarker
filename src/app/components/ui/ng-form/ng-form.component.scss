@@ -5,10 +5,21 @@
 }
 .dialog-content{
   overflow: hidden;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 .form-field{
-  padding-top: 1rem;
+  padding-top: 0;
 }
 .action{
-  padding-right: 1.5rem;
+  padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top:1.5rem;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+.action-btn{
+  flex: 1;
 }

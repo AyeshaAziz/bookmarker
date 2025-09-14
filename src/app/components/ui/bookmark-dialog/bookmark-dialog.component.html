@@ -1,6 +1,8 @@
 <div class="dialog-container">
   <div class="header">
-    <h2 mat-dialog-title tabindex="-1">{{ dialogData.dialogTitle }}</h2>
+    <div class="title-container" mat-dialog-title>
+      <span>{{ dialogData.dialogTitle }}</span>
+    </div>
   </div>
   <app-ng-form
     [label]="dialogData.buttonLabel"

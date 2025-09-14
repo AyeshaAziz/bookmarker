@@ -27,13 +27,16 @@
     caret-color: white;
     width: 95%;
     padding-right: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
-.close-icon{
+.close-icon {
   position: relative;
   top: 0.5rem;
-  color: darkgrey!important;
-  font-size:1rem;
+  color: darkgrey !important;
+  font-size: 1rem;
 }
 
 // disable native cross button
